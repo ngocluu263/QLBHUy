@@ -1,0 +1,43 @@
+﻿
+    .NewsTab .ajax__tab_header
+    {
+        color: White;
+        font-size: 13px;
+        font-weight: bold;
+        background-color: White;
+        margin-left: 5px;
+        line-height:25px;
+        margin-top:5px;
+        
+    }
+    .NewsTab .ajax__tab_outer
+    {
+        background-color: White;
+    }
+    .NewsTab .ajax__tab_inner
+    {
+        padding: 5px 2px;
+        margin:1px;
+        background-color: #428BCA;
+        border-radius:5px 5px 0px 0px;
+        border:1px solid gray;
+    }
+    .NewsTab .ajax__tab_hover .ajax__tab_outer
+    {
+        background-color: Orange;
+        border-radius:5px 5px 0px 0px;
+    }
+    .NewsTab .ajax__tab_hover .ajax__tab_inner
+    {
+        background-color: #6EAC2C;
+        color:#FFFFFF;
+    }
+    .NewsTab .ajax__tab_active .ajax__tab_outer
+    {
+        background-color: White;
+    }
+    .NewsTab .ajax__tab_active .ajax__tab_inner
+    {
+        background-color: #6EAC2C;
+        color: #FFFFFF;
+    }

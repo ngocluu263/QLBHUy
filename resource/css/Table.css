@@ -1,0 +1,29 @@
+﻿@media (min-width:1200px)
+{
+.row {width:1170px;}
+.col-xs-1,
+.col-xs-2,
+.col-xs-3,
+.col-xs-4,
+.col-xs-5,
+.col-xs-6{float:left;width:99%;}
+}
+
+
+@media (min-width:1024px)
+{
+.row {width:994px;}    
+.col-xs-1,
+.col-xs-2,
+.col-xs-3,
+.col-xs-4,
+.col-xs-5,
+.col-xs-6{float:left}
+.col-xs-6{width:99%}
+.col-xs-5{width:83.33333333%}
+.col-xs-4{width:66.66666667%}
+.col-xs-3{width:50%}
+.col-xs-2{width:33.33333333%}
+.col-xs-1{width:16.66666667%}
+
+}

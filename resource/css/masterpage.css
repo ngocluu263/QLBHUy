@@ -1,0 +1,118 @@
+﻿.danhmuc {
+    cursor: pointer;
+    background-color: #428BCA;/*#F76C2C*/
+    color: White;
+    font-weight: bold;
+    width: 100%;
+    padding: 10px 10px;
+    height: auto;
+}
+
+.head {
+    font-weight: bold;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.green {
+    color: #efbc75 !important;
+}
+
+.Yellow {
+    color: White;
+}
+
+.sidr ul li a, .sidr ul li span {
+    padding: 0 10px;
+    display: block;
+    text-decoration: none;
+}
+
+#sctop {
+    width: 50px;
+    height: 45px;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    z-index: 100;
+    cursor: pointer;
+}
+.rowheight{ line-height:17px;}
+.rowheight > td { padding:1px 5px;}
+@media (min-width: 100px) {
+    .ftKLNVKD {
+        position: fixed;
+        bottom: 37px;
+        right: 3px;
+        z-index: 999999;
+    }
+}
+
+@media (min-width: 950px) {
+    .ftKLNVKD {
+        position: fixed;
+        bottom: -3px;
+        left: 40%;
+        z-index: 999999;
+    }
+}
+
+
+
+.float-ck {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    z-index: 999;
+    background-color: #E0EFFF;
+}
+
+#float_content_right {
+    width: 360px;
+    border: 1px solid #01AEF0;
+    z-index: 10000;
+}
+
+#hide_float_right {
+    line-height: 35px;
+    background-color: #428BCA;
+    width: 100%;
+    color: White;
+    text-align: center;
+    cursor: pointer;
+    padding-left: 10px;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+    #hide_float_right a {
+        padding: 2px 4px;
+        color: #FFF;
+        text-decoration: none;
+        margin-right: 50px;
+    }
+.select2-drop { z-index:99999;}
+.bang tr th {
+    background-color:#DFF0D8; text-align:center;
+    border:1px solid #ccc;
+    line-height:35px;
+    font-size:13px;
+}
+.bang tr td{
+    border:1px solid #ccc;
+    line-height:35px;
+    font-size:13px;
+}
+.bang {
+     background-image: url(/resource/img/content.png); background-repeat: repeat;
+}
+.bang tr td {
+    padding-left:5px;
+}
+.bang tr:hover {
+    background-color:lavender; cursor:pointer;
+}
+.bang_nhap tr td span{ margin-left:5px;}
+.thaotac {
+    padding:5px 5px; margin-right:5px; background-color:transparent; color:green;border:1px solid green; border-radius:5px;
+}
