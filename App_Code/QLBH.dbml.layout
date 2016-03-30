@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="QLBH">
+  <DataContextMoniker Name="/QLBHDataContext" />
+  <nestedChildShapes>
+    <classShape Id="57afe2d4-79eb-46b8-bc6e-e66e7bfadbb7" absoluteBounds="3.75, 0.75, 2, 1.1455000813802085">
+      <DataClassMoniker Name="/QLBHDataContext/tbl_DonViTinh" />
+      <nestedChildShapes>
+        <elementListCompartment Id="094a9e10-0996-4876-b2d0-7d770b47bb07" absoluteBounds="3.765, 1.21, 1.9700000000000002, 0.58550008138020826" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5b0e2776-345b-448f-88a1-81a454fe25dc" absoluteBounds="0.75, 3.75, 2, 1.145500081380209">
+      <DataClassMoniker Name="/QLBHDataContext/tbl_ThanhPham" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4601b30e-557f-49e3-b9d2-be37f107e38a" absoluteBounds="0.76500000000000012, 4.21, 1.9700000000000002, 0.58550008138020826" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4a714ae1-cffe-41e4-a14d-6e1772284f54" absoluteBounds="3.75, 2.75, 2, 1.1455000813802077">
+      <DataClassMoniker Name="/QLBHDataContext/tbl_NhomHang" />
+      <nestedChildShapes>
+        <elementListCompartment Id="773fe941-6135-4ab7-822b-00c4086a9d83" absoluteBounds="3.765, 3.21, 1.9700000000000002, 0.58550008138020826" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="668e03b5-814d-4361-b5c0-f18f44bc0291" absoluteBounds="3.75, 4.75, 2, 2.3946252441406255">
+      <DataClassMoniker Name="/QLBHDataContext/tbl_KhachHang" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4574bd1c-54a8-4eba-8cd3-6eb806d6ae59" absoluteBounds="3.765, 5.21, 1.9700000000000002, 1.834625244140625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="771946f4-94cf-46ff-bb44-d76c1048319a" absoluteBounds="1, 1.25, 2, 2.2161787923177085">
+      <DataClassMoniker Name="/QLBHDataContext/tbl_NCC" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ab04ee42-bd90-48cd-9d42-2afa0ab1c8ba" absoluteBounds="1.0150000000000001, 1.71, 1.9700000000000002, 1.6561787923177085" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

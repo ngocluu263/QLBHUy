@@ -1,0 +1,237 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="Admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Hệ thống quản lý doanh nghiệp</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link href="resource/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="resource/css/jquery.sidr.dark.css" rel="stylesheet" type="text/css" />
+    <script src="resource/js/jquery.min.js" type="text/javascript"></script>
+    <script src="resource/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="resource/js/jquery.sidr.min.js" type="text/javascript"></script>
+    <link href="resource/Lobibox/Lobibox.min.css" rel="stylesheet" type="text/css" />
+    <script src="resource/Lobibox/lobibox.min.js" type="text/javascript"></script>
+    <script src="resource/Lobibox/demo.js" type="text/javascript"></script>
+    <script src="resource/js/select2.js" type="text/javascript"></script>
+    <link href="resource/js/select2.css" rel="stylesheet" />
+    <script type="text/javascript">
+        function BindEvents() {
+            $(document).ready(function () {
+                $(".dropbox").select2();
+                $('[data-toggle="tooltip"]').tooltip({ placement: 'top' });
+            });
+        };
+        function Mess(txt) {
+            Lobibox.notify('warning', {
+                delay: 3000,
+                size: 'mini',
+                //width: $(window).width(),
+                width: 500,
+                position: 'bottom right',
+                icon: true,
+                msg: [txt].join("")
+            });
+        }
+    </script>
+    <style type="text/css">
+        @font-face
+        {
+            font-family: 'Glyphicons Halflings';
+            src: url('resource/css/fonts/glyphicons-halflings-regular.eot');
+            src: url('resource/css/fonts//glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('resource/css/fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('resource/css/fonts/glyphicons-halflings-regular.woff') format('woff'), url('resource/css/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('resource/css/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+        }
+    </style>
+    <link href="resource/css/masterpage.css" rel="stylesheet" />
+    <link href="resource/css/glyphicon.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="font-family: Tahoma !important; margin: 0px; padding: 0px; min-width: 800px;
+    background-image: url(resource/img/content.png); background-repeat: repeat; overflow-x: hidden !important;">
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="sc" runat="server" EnablePageMethods="true">
+    </asp:ScriptManager>
+    <div id="sidr" class="wrapper">
+        <%--<asp:Label ID="lbMenu" runat="server"></asp:Label>--%>
+        <ul id="nav">
+            <li class="head has-sub"><a href="#" class="green">
+                <img src="resource/img/arrow.png" alt="gif">&nbsp;&nbsp;Hệ thống</a> </li>
+            <li class="head has-sub"><a href="#" class="green">
+                <img src="resource/img/arrow.png" alt="gif">&nbsp;&nbsp;Danh mục</a>
+                <ul id="child" style="display: none;">
+                    <li><a href="#">
+                        <img src="resource/img/cube_orange.gif" alt="gif">&nbsp;&nbsp;Nhà cung cấp</a>
+                    </li>
+                    <li><a href="#">
+                        <img src="resource/img/cube_orange.gif" alt="gif">&nbsp;&nbsp;Đơn vị tính</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="head has-sub"><a href="#" class="green">
+                <img src="resource/img/arrow.png" alt="gif">&nbsp;&nbsp;Nghiệp vụ</a> </li>
+            <li class="head has-sub"><a href="#" class="green">
+                <img src="resource/img/arrow.png" alt="gif">&nbsp;&nbsp;Báo cáo</a>
+                <ul id="child" style="display: none;">
+                    <li><a href="#">
+                        <img src="resource/img/cube_orange.gif" alt="gif">&nbsp;&nbsp;Báo cáo tồn kho</a><ul
+                            id="child" style="display: none;">
+                            <li><a href="#">
+                                <img src="resource/img/cube_orange.gif" alt="gif">&nbsp;&nbsp;Báo cáo tồn kho 1</a><ul
+                                    id="child" style="display: none;">
+                                </ul>
+                            </li>
+                            <li><a href="#">
+                                <img src="resource/img/cube_orange.gif" alt="gif">&nbsp;&nbsp;Báo cáo tồn kho 2</a><ul
+                                    id="child" style="display: none;">
+                                </ul>
+                            </li>
+                            <li><a href="#">
+                                <img src="resource/img/cube_orange.gif" alt="gif">&nbsp;&nbsp;Báo cáo tồn kho 3</a><ul
+                                    id="child" style="display: none;">
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div id="mainvnt" style="margin-bottom: 40px;">
+        <div id="simple-menu" class="danhmuc" style="z-index: 999; position: fixed; top: 0px;
+            height: 42px; overflow: hidden;">
+            <div style="float: left;">
+                <span>
+                    <img src="resource/img/1407311098_view_text.png" />&nbsp;MENU <span id="todaydate">
+                    </span></span>
+            </div>
+            <div style="width: 800px; float: right; text-align: right;">
+                <asp:Label ID="lb" Text="HỆ THỐNG QUẢN LÝ BÁN HÀNG | CÔNG TY CỔ PHẦN DỊCH VỤ VÀ THƯƠNG MẠI XYZ"
+                    Visible="true" runat="server"></asp:Label>
+            </div>
+        </div>
+        <div style="margin-top: 45px; min-height: 100%; min-width: 1343px;">
+            <div style="margin-top: -3px; height: 30px; overflow: hidden;">
+                <asp:UpdatePanel ID="fa" runat="server">
+                    <ContentTemplate>
+                        <iframe style="border: 1px solid #Ccc; margin: 0px; padding: 0px; width: 100%;" src="uc_History.aspx">
+                            History</iframe>
+                    </ContentTemplate>
+                </asp:UpdatePanel>
+            </div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+    <div id="footer" class="danhmuc" style="z-index: 999; position: fixed; bottom: 0px;">
+        Tài khoản:&nbsp;
+        <asp:Label ID="lbTaiKhoan" Text="Administrator" runat="server"></asp:Label>&nbsp;&nbsp;&nbsp;
+        |&nbsp;&nbsp;&nbsp; <a style="color: White;" href="#">Đăng xuất</a>&nbsp;&nbsp;&nbsp;
+    </div>
+    <div class="float-ck" style="right: 0px;">
+        <div id="hide_float_right">
+            <img id="sctop" src="resource/img/up.ico" alt="Lên đầu trang" style="margin-top: 10px;" />
+            <a href="javascript:hide_float_right()">THÔNG BÁO</a>
+        </div>
+        <div id="float_content_right" style="display: none;">
+            <div style="padding: 10px; line-height: 25px; min-height: 200px;">
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(window).scrollTop() > 10) {
+                    $('#sctop').fadeIn();
+                } else {
+                    $('#sctop').fadeOut();
+                }
+            });
+            $('#sctop').click(function () {
+                $('html, body').animate({ scrollTop: 0 }, 1000);
+            });
+
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#nav li ul').slideUp();
+            $('#nav > li:has(ul)').addClass("has-sub");
+
+            $('#nav > li > a').click(function () {
+                var checkElement = $(this).next();
+
+                $('#nav li').removeClass('active');
+                $(this).closest('li').addClass('active');
+                if ((checkElement.is('ul')) && (checkElement.is(':visible'))) {
+                    $(this).closest('li').removeClass('active');
+                    checkElement.slideUp();
+                }
+
+                if ((checkElement.is('ul')) && (!checkElement.is(':visible'))) {
+                    $('#nav li ul:visible').slideUp('normal');
+                    checkElement.slideDown();
+                }
+
+                if (checkElement.is('ul')) {
+                    return false;
+                } else {
+                    return true;
+                }
+            });
+
+            $('#nav > li > ul > li').click(function () {
+                var stt = $(this).find('ul').css('display');
+                $('#nav > li > ul > li > ul').css("display", "none");
+
+                if (stt == "none")
+                    $(this).find('ul').show('slow');
+                else {
+                    $(this).find('ul').hide('slow');
+                }
+            });
+
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#simple-menu').sidr();
+            Sys.Application.add_load(BindEvents);
+        });
+    </script>
+    <script type="text/javascript">
+        var myVar = setInterval(function () { Rundate() }, 1000);
+        function Rundate() {
+            var i = new Date;
+            var n = i.getHours(), r = i.getMinutes(), u = i.getSeconds(), e = i.getDate(), o = i.getDay(), s = i.getMonth() + 1, h = i.getFullYear(), t = "", f = "AM";
+            if (n >= 12) f = "PM";
+
+            if (n == 0) n = 12;
+            if (n < 10) n = "0" + n;
+            if (r < 10) r = "0" + r;
+            if (u < 10) u = "0" + u;
+            if (e < 10) e = "0" + e;
+            if (s < 10) s = "0" + s;
+
+            switch (o) { case 0: t = "Chủ nhật, "; break; case 1: t = "Thứ hai, "; break; case 2: t = "Thứ 3, "; break; case 3: t = "Thứ 4, "; break; case 4: t = "Thứ 5, "; break; case 5: t = "Thứ 6, "; break; case 6: t = "Thứ 7, " };
+            document.getElementById("todaydate").innerHTML = " - Hôm nay, " + t + e + "/" + s + "/" + h + " - " + n + ":" + r + ":" + u + " " + f;
+        }
+    </script>
+    <script type="text/javascript">
+        function hide_float_right() {
+            var content = document.getElementById('float_content_right');
+            var hide = document.getElementById('hide_float_right');
+            if (content.style.display == "none") {
+                content.style.display = "block";
+            }
+            else {
+                content.style.display = "none";
+
+            }
+        }
+    </script>
+    </form>
+</body>
+</html>
