@@ -58,7 +58,19 @@
         <%--<asp:Label ID="lbMenu" runat="server"></asp:Label>--%>
         <ul id="nav">
             <li class="head has-sub"><a href="#" class="green">
-                <img src="resource/img/arrow.png" alt="gif">&nbsp;&nbsp;Hệ thống</a> </li>
+                <img src="resource/img/arrow.png" alt="gif">&nbsp;&nbsp;Hệ thống</a>
+                <ul id="child" style="display: none;">
+                    <li><a href="#">
+                        <img src="resource/img/cube_orange.gif" alt="gif">&nbsp;&nbsp;Người dùng</a>
+                    </li>
+                    <li><a href="#">
+                        <img src="resource/img/cube_orange.gif" alt="gif">&nbsp;&nbsp;Đổi mật khẩu</a>
+                    </li>
+                    <li><a href="#">
+                        <img src="resource/img/cube_orange.gif" alt="gif">&nbsp;&nbsp;Nhật kí sử dụng</a>
+                    </li>
+                </ul>
+            </li>
             <li class="head has-sub"><a href="#" class="green">
                 <img src="resource/img/arrow.png" alt="gif">&nbsp;&nbsp;Danh mục</a>
                 <ul id="child" style="display: none;">
@@ -66,12 +78,38 @@
                         <img src="resource/img/cube_orange.gif" alt="gif">&nbsp;&nbsp;Nhà cung cấp</a>
                     </li>
                     <li><a href="#">
+                        <img src="resource/img/cube_orange.gif" alt="gif">&nbsp;&nbsp;Khách hàng</a>
+                    </li>
+                    <li><a href="#">
                         <img src="resource/img/cube_orange.gif" alt="gif">&nbsp;&nbsp;Đơn vị tính</a>
+                    </li>
+                    <li><a href="#">
+                        <img src="resource/img/cube_orange.gif" alt="gif">&nbsp;&nbsp;Nhóm hàng</a>
+                    </li>
+                    <li><a href="#">
+                        <img src="resource/img/cube_orange.gif" alt="gif">&nbsp;&nbsp;Hàng hóa</a> </li>
+                    <li><a href="#">
+                        <img src="resource/img/cube_orange.gif" alt="gif">&nbsp;&nbsp;Thành phẩm</a>
                     </li>
                 </ul>
             </li>
             <li class="head has-sub"><a href="#" class="green">
-                <img src="resource/img/arrow.png" alt="gif">&nbsp;&nbsp;Nghiệp vụ</a> </li>
+                <img src="resource/img/arrow.png" alt="gif">&nbsp;&nbsp;Nghiệp vụ</a>
+                <ul>
+                    <li><a href="#">
+                        <img src="resource/img/cube_orange.gif" alt="gif">&nbsp;&nbsp;Nhập hàng</a>
+                    </li>
+                    <li><a href="#">
+                        <img src="resource/img/cube_orange.gif" alt="gif">&nbsp;&nbsp;Xuất hàng</a>
+                    </li>
+                    <li><a href="#">
+                        <img src="resource/img/cube_orange.gif" alt="gif">&nbsp;&nbsp;Phiếu thu</a>
+                    </li>
+                    <li><a href="#">
+                        <img src="resource/img/cube_orange.gif" alt="gif">&nbsp;&nbsp;Phiếu chi</a>
+                    </li>
+                </ul>
+            </li>
             <li class="head has-sub"><a href="#" class="green">
                 <img src="resource/img/arrow.png" alt="gif">&nbsp;&nbsp;Báo cáo</a>
                 <ul id="child" style="display: none;">
