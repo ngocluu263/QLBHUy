@@ -4,18 +4,21 @@
     <Type Name="tbl_DonViTinh">
       <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="TenDonViTinh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="tbl_DonViTinh_tbl_CTQuyDoi" Member="tbl_CTQuyDois" ThisKey="ID" OtherKey="DonViTinhID" Type="tbl_CTQuyDoi" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_ThanhPham" Member="tbl_ThanhPhams">
     <Type Name="tbl_ThanhPham">
       <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="TenThanhPham" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Association Name="tbl_ThanhPham_tbl_CTQuyDoi" Member="tbl_CTQuyDois" ThisKey="ID" OtherKey="ThanhPhamID" Type="tbl_CTQuyDoi" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_NhomHang" Member="tbl_NhomHangs">
     <Type Name="tbl_NhomHang">
       <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="TenNhomHang" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="tbl_NhomHang_tbl_HangHoa" Member="tbl_HangHoas" ThisKey="ID" OtherKey="NhomHangID" Type="tbl_HangHoa" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_KhachHang" Member="tbl_KhachHangs">
@@ -41,6 +44,40 @@
       <Column Name="DiaChi" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
       <Column Name="MST" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
       <Column Name="GhiChu" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_QuiDoi" Member="tbl_QuiDois">
+    <Type Name="tbl_QuiDoi">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="HangHoaID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TuNgay" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="DenNgay" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Association Name="tbl_QuiDoi_tbl_CTQuyDoi" Member="tbl_CTQuyDois" ThisKey="ID" OtherKey="QuiDoiID" Type="tbl_CTQuyDoi" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_CTQuyDoi" Member="tbl_CTQuyDois">
+    <Type Name="tbl_CTQuyDoi">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="QuiDoiID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ThanhPhamID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DonViTinhID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SoLuong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="tbl_QuiDoi_tbl_CTQuyDoi" Member="tbl_QuiDoi" ThisKey="QuiDoiID" OtherKey="ID" Type="tbl_QuiDoi" IsForeignKey="true" />
+      <Association Name="tbl_DonViTinh_tbl_CTQuyDoi" Member="tbl_DonViTinh" ThisKey="DonViTinhID" OtherKey="ID" Type="tbl_DonViTinh" IsForeignKey="true" />
+      <Association Name="tbl_ThanhPham_tbl_CTQuyDoi" Member="tbl_ThanhPham" ThisKey="ThanhPhamID" OtherKey="ID" Type="tbl_ThanhPham" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_HangHoa" Member="tbl_HangHoas">
+    <Type Name="tbl_HangHoa">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TenHH" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="NhomHangID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GiaBan" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="SoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HinhAnh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MoTa" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DVT" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Association Name="tbl_NhomHang_tbl_HangHoa" Member="tbl_NhomHang" ThisKey="NhomHangID" OtherKey="ID" Type="tbl_NhomHang" IsForeignKey="true" DeleteRule="CASCADE" />
     </Type>
   </Table>
 </Database>

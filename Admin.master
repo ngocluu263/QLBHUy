@@ -1,5 +1,6 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="Admin" %>
 
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
@@ -74,21 +75,21 @@
             <li class="head has-sub"><a href="#" class="green">
                 <img src="resource/img/arrow.png" alt="gif">&nbsp;&nbsp;Danh mục</a>
                 <ul id="child" style="display: none;">
-                    <li><a href="#">
+                    <li><a href="NhaCungCap.aspx">
                         <img src="resource/img/cube_orange.gif" alt="gif">&nbsp;&nbsp;Nhà cung cấp</a>
                     </li>
-                    <li><a href="#">
+                    <li><a href="KhachHang.aspx">
                         <img src="resource/img/cube_orange.gif" alt="gif">&nbsp;&nbsp;Khách hàng</a>
                     </li>
-                    <li><a href="#">
+                    <li><a href="DonViTinh.aspx">
                         <img src="resource/img/cube_orange.gif" alt="gif">&nbsp;&nbsp;Đơn vị tính</a>
                     </li>
-                    <li><a href="#">
+                    <li><a href="NhomHangHoa.aspx">
                         <img src="resource/img/cube_orange.gif" alt="gif">&nbsp;&nbsp;Nhóm hàng</a>
                     </li>
-                    <li><a href="#">
+                    <li><a href="HangHoa.aspx">
                         <img src="resource/img/cube_orange.gif" alt="gif">&nbsp;&nbsp;Hàng hóa</a> </li>
-                    <li><a href="#">
+                    <li><a href="ThanhPham.aspx">
                         <img src="resource/img/cube_orange.gif" alt="gif">&nbsp;&nbsp;Thành phẩm</a>
                     </li>
                 </ul>

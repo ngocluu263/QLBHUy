@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.master" AutoEventWireup="true"
+﻿<%@ Page Title="Danh mục nhà cung cấp" Language="C#" MasterPageFile="~/Admin.master" AutoEventWireup="true"
     CodeFile="NhaCungCap.aspx.cs" Inherits="NhaCungCap" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
